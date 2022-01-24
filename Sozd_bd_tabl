@@ -1,0 +1,35 @@
+CREATE datebase [BD_1]
+GO
+USE [BD_1]
+GO
+ 
+CREATE TABLE [dbo].[Table_1111Y12A] (
+    [ID] [int] NOT NULL,
+    [Name] [nvarchar](255) NULL,
+    [Description] [nvarchar](max) NULL,
+    PRIMARY KEY (ID),
+  )
+  GO
+ 
+CREATE table [dbo].[Table_2111Y12A] (
+    [ID] [int] NOT NULL,
+    [Spec_Name] [nvarchar](20) 
+    PRIMARY KEY (ID),
+    )
+ 
+GO
+ 
+CREATE table [dbo].[Table_3_sviaz111Y12A] (
+    [NAME_ID] [int]  NOT NULL,
+    [SPEC] [INT]  NOT NULL,
+    FOREIGN KEY (SPEC) REFERENCES Table_1111Y12A (ID),
+    FOREIGN KEY (NAME_ID) REFERENCES Table_2111Y12A (ID) ON DELETE CASCADE
+    )
+GO
+ 
+CREATE table [dbo].[Table_4_color111Y12A] (
+    [ID_COLOR] [int] PRIMARY KEY NOT NULL,
+    [COLOR] [char] 
+ 
+    )
+GO
