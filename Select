@@ -1,0 +1,8 @@
+USE [BD_1]
+GO
+ 
+SELECT Table_1111Y12A.Name, Table_2111Y12A.SPEC_NAME
+From Table_1111Y12A,Table_2111Y12A
+where Name = 'Василий';
+
+--запрос на вывод проф. по Name
